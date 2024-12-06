@@ -1,5 +1,17 @@
 public class Calculator {
     public int add(int a, int b){
+
+        return a+b;
+    }
+    public int dif(int a, int b){
+        return a-b;
+    }
+    public int div(int a, int b) {
+        if (b == 0) {
+            throw new ArithmeticException("Дaun?");
+        }
+        return a / b;
+
         return  a+b;
     }
     public int dif(int a, int b){
@@ -19,6 +31,9 @@ public class Calculator {
     }
 
     public int solver() {
+        int result = add(10, 5); // 15
+        result = times(result, 2); // 30
+        result = div(result, 3); // 10
         int result = add(5, 5); // 10
         result = times(result, 2); // 20
         result = div(result, 2); // 10
