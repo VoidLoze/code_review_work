@@ -1,12 +1,4 @@
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-# This workflow will build a Java project with Gradle and cache/restore any dependencies to improve the workflow execution time
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-java-with-gradle
-
 name: Java CI with Gradle
-
 on:
   push:
     branches: [ "main" ]
@@ -15,8 +7,9 @@ on:
   schedule:
     - cron: '30 12 * * 3'
     - cron: '0 22 * * 5'
+  workflow_dispatch:
+
 jobs:
-  jobs:
   build-ubuntu-java-11:
     name: Build on Ubuntu with Java 11
     runs-on: ubuntu-latest
